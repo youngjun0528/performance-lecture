@@ -13,7 +13,7 @@ function ViewPage(props) {
 
   // 게시글 가져오기
   const getArticle = useCallback(id => {
-    axios.get('http://localhost:3001/articles/' + id).then(success => {
+    axios.get('http://localhost:3002/articles/' + id).then(success => {
       setArticle(success.data)
     })
   }, [])
