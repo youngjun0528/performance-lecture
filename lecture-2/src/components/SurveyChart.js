@@ -10,8 +10,8 @@ const SurveyChart = () => {
 
     useEffect(() => {
         Promise.all([
-            fetch('http://localhost:3001/answer').then((res) => res.json()),
-            fetch('http://localhost:3001/survey').then((res) => res.json())
+            fetch('http://localhost:3002/answer').then((res) => res.json()),
+            fetch('http://localhost:3002/survey').then((res) => res.json())
         ])
             .then(([answer, survey]) => {
                 setAnswer(answer.data)
