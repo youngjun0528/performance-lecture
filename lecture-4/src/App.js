@@ -5,7 +5,7 @@ import Header from './components/Header';
 import PhotoListContainer from './containers/PhotoListContainer';
 import ImageModalContainer from './containers/ImageModalContainer';
 
-axios.defaults.baseURL = 'http://localhost:3001';
+axios.defaults.baseURL = 'http://localhost:3002';
 
 function App() {
   return (

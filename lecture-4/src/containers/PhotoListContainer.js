@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import {shallowEqual, useDispatch, useSelector} from 'react-redux';
 import PhotoList from '../components/PhotoList';
 import { fetchPhotos } from '../redux/photos';
 
@@ -18,7 +18,9 @@ function PhotoListContainer() {
             photo => photo.category === state.category.category
           ),
     loading: state.photos.loading,
-  }));
+  }),
+      shallowEqual
+  );
 
   if (loading === 'error') {
     return <span>Error!</span>;
